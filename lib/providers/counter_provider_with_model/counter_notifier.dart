@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_demo/providers/counter_provider_with_model/counter_state_model.dart';
 
-final counterProviderModelNotifier = StateNotifierProvider<CounterNotifier, CounterStateModel>
+final counterProviderModelNotifier = StateNotifierProvider.autoDispose<CounterNotifier, CounterStateModel>
   ((ref) => CounterNotifier());
 
 class CounterNotifier extends StateNotifier<CounterStateModel> {
